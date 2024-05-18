@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(30, 30, 60);
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+}
+
+.slide:nth-child(1) {
+    background-color: yellow;
+}
+
+.slide:nth-child(2) {
+    background-color: green;
+}
+
+.slide:nth-child(3) {
+    background-color: blue;
+} 
