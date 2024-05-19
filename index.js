@@ -2,12 +2,22 @@ window.addEventListener('load', () => {
     let currentIndex = 0;
     const slides = document.querySelectorAll('.slide');
 
+    function Message(index) {
+        const  animation = document.querySelectorAll('.textbox');
+        if (index == 1) {
+            animation.forEach(box => {
+                box.style.animationPlayState = 'running';
+            });
+        }
+    }
+
     function scrollToSlide(index) {
         const targetPosition = index * window.innerHeight;
         window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
         });
+         Message(index);
     }
 
     function nextSlide() {
