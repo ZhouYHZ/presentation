@@ -10,15 +10,14 @@ body {
 .page {
     padding: 15vh 10vw;
     text-align: center;
+    color: white;
 }
 
 h1 {
-    color: white;
     font-size: 300%;
 }
 
 h2 {
-    color: white;
     font-size: 200%;
 }
 
@@ -28,3 +27,7 @@ h2 {
     right: 0;
     color: white;
 }
+
+/* img {
+    transform: rotate(30deg);
+} */

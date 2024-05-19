@@ -58,13 +58,13 @@ var myVar = setInterval(function(){myTimer ()},1000);
 
 function myTimer () {
     if (i >= 60) {
-        var s = i;
-        var m = 0;
+        let s = i;
+        let m = 0;
         while (s >= 60) {
             s = s - 60;
             m = m + 1;
         }
-        var sec = i - m * 60;
+        let sec = i - m * 60;
         document.getElementsByClassName("time")[0].innerHTML = m + ":" + sec;
     } else {
         document.getElementsByClassName("time")[0].innerHTML = i;
