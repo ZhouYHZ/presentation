@@ -23,9 +23,36 @@ h2 {
 
 .time {
     position: absolute;
-    top: 95%;
-    right: 0;
     color: white;
+    font-size: 200%;
+    right: 0;
+}
+
+.textbox {
+    border-radius:0.3em;
+    color: black;
+    font-size: 150%
+}
+
+.textbox:nth-child(1) {
+    width: 40%;
+    background-color: white;
+}
+
+.textbox:nth-child(2) {
+    width: 30%;
+    background-color: #91ED61;
+    transform: translate(calc((7/3) * 100%),0);
+}
+
+.textbox:nth-child(3) {
+    width: 50%;
+    background-color: white;
+}
+
+.textbox:nth-child(4) {
+    width: 20%;
+    background-color: white;
 }
 
 /* img {
