@@ -22,7 +22,7 @@ h2 {
 }
 
 p {
-    font-size: 150%;
+    font-size: 170%;
 }
 
 .time {
@@ -47,7 +47,7 @@ p {
 .textbox:nth-child(1) {
     width: 55%;
     background-color: white;
-    animation: box 1s forwards;
+    animation: box 1s 1s forwards;
     animation-play-state: paused;
 }
 
@@ -55,20 +55,20 @@ p {
     width: 30%;
     background-color: #91ED61;
     transform: translate(calc((7/3) * 100%),0);
-    animation: box 1s 1s forwards;
+    animation: box 1s 2s forwards;
     animation-play-state: paused;
 }
 
 .textbox:nth-child(3) {
     width: 40%;
     background-color: white;
-    animation: box 1s 2s forwards;
+    animation: box 1s 3s forwards;
     animation-play-state: paused;
 }
 
 .textbox:nth-child(4) {
     width: 20%;
     background-color: white;
-    animation: box 1s 3s forwards;
+    animation: box 1s 4s forwards;
     animation-play-state: paused;
 }
