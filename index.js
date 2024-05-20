@@ -77,9 +77,11 @@ function myTimer () {
         let sec = i - m * 60;
         document.getElementsByClassName("time")[0].innerHTML = m + ":" + sec;
         document.getElementsByClassName("time")[1].innerHTML = m + ":" + sec;
+        document.getElementsByClassName("time")[2].innerHTML = m + ":" + sec;
     } else {
         document.getElementsByClassName("time")[0].innerHTML = i;
         document.getElementsByClassName("time")[1].innerHTML = i;
+        document.getElementsByClassName("time")[2].innerHTML = i;
     }
     i = i + 1;
 }
