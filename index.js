@@ -89,7 +89,6 @@ function myTimer () {
     i = i + 1;
 };
 
-
 window.addEventListener('load', () => {
     const range = document.querySelector('.space');
     const button = document.querySelector('.bar');
