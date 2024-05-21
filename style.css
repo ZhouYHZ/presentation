@@ -91,5 +91,5 @@ p {
     height: 4vw;
     border-radius: 2vw;
     background-color: white;
-    transform: translate(0,7vw);
+    transform: translate(-2vw,7vw);
 }

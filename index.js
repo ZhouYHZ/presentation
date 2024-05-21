@@ -97,18 +97,20 @@ window.addEventListener('load', () => {
     function x_value(event) {
         const Range = range.getBoundingClientRect();
         const current = event.clientX - Range.left;
-        const X = current / Range.width;
-        button.style.transform = `translate(${X*76}vw,7vw)`;
+        const value = Math.max (0, Math.min (current, Range.width));
+        console.log (value);
+        const X = value / Range.width;
+        button.style.transform = `translate(${X * 80 - 2}vw,7vw)`;
     }
 
     range.addEventListener('mousedown', (e) => {
         activity = true;
-        x_value(e); 
+        x_value(event); 
     });
 
     range.addEventListener('mousemove', (e) => {
         if (activity == true) {
-            x_value(e);
+            x_value(event);
         }
     });
 
