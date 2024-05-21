@@ -72,3 +72,24 @@ p {
     animation: box 1s 4s forwards;
     animation-play-state: paused;
 }
+
+.space {
+    width: 100%;
+    height: 20vw;
+}
+
+.line {
+    width: 100%;
+    height: 1vw; 
+    border-radius:0.5vw;
+    background-color: white;
+    transform: translateY(9.5vw);
+}
+
+.bar {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 2vw;
+    background-color: white;
+    transform: translate(0,7vw);
+}

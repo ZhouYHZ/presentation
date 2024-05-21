@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
 });
 
 var i = 1;
-var myVar = setInterval(function(){myTimer ()},1000);
+setInterval(function(){myTimer ()},1000);
 
 function myTimer () {
     if (i >= 60) {
@@ -78,10 +78,45 @@ function myTimer () {
         document.getElementsByClassName("time")[0].innerHTML = m + ":" + sec;
         document.getElementsByClassName("time")[1].innerHTML = m + ":" + sec;
         document.getElementsByClassName("time")[2].innerHTML = m + ":" + sec;
+        document.getElementsByClassName("time")[3].innerHTML = m + ":" + sec;
     } else {
         document.getElementsByClassName("time")[0].innerHTML = i;
         document.getElementsByClassName("time")[1].innerHTML = i;
         document.getElementsByClassName("time")[2].innerHTML = i;
+        document.getElementsByClassName("time")[3].innerHTML = i;
     }
     i = i + 1;
-}
+};
+
+
+window.addEventListener('load', () => {
+    const range = document.querySelector('.space');
+    const button = document.querySelector('.bar');
+    let activity = false;
+
+    function x_value(event) {
+        const Range = range.getBoundingClientRect();
+        const current = event.clientX - Range.left;
+        const X = current / Range.width;
+        button.style.transform = `translate(${X*76}vw,7vw)`;
+    }
+
+    range.addEventListener('mousedown', (e) => {
+        activity = true;
+        x_value(e); 
+    });
+
+    range.addEventListener('mousemove', (e) => {
+        if (activity == true) {
+            x_value(e);
+        }
+    });
+
+    range.addEventListener('mouseup', () => {
+        activity = false;
+    });
+
+    range.addEventListener('mouseleave', () => {
+        activity = false;
+    });
+});
