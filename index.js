@@ -47,7 +47,8 @@ window.addEventListener('load', () => {
     window.addEventListener('keydown', (event) => {
         if (event.code === 'ArrowDown') {
             nextSlide();
-            event.preventDefault(); // block
+            // block
+            event.preventDefault();
         }
     });
 
@@ -55,7 +56,7 @@ window.addEventListener('load', () => {
     window.addEventListener('keydown', (event) => {
         if (event.code === 'ArrowUp') {
             previousSlide();
-            event.preventDefault(); // block
+            event.preventDefault();
         }
     });
 
