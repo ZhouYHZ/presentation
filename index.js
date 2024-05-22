@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
     let currentIndex = 0;
+    //DOM
     const slides = document.querySelectorAll('.slide');
 
     function Message(index) {
@@ -90,35 +91,40 @@ function myTimer () {
 };
 
 window.addEventListener('load', () => {
-    const range = document.querySelector('.space');
+    const block = document.querySelector('.space');
     const button = document.querySelector('.bar');
     let activity = false;
 
     function x_value(event) {
-        const Range = range.getBoundingClientRect();
+        const Range = block.getBoundingClientRect();
         const current = event.clientX - Range.left;
         const value = Math.max (0, Math.min (current, Range.width));
         console.log (value);
         const X = value / Range.width;
         button.style.transform = `translate(${X * 80 - 2}vw,7vw)`;
+        if (X <= 0.5) {
+            document.getElementsByClassName("note")[0].innerHTML = "1 hour"
+        } else if (X > 0.5) {
+            document.getElementsByClassName("note")[0].innerHTML = "2 hour"
+        }
     }
 
-    range.addEventListener('mousedown', (e) => {
+    block.addEventListener('mousedown', (event) => {
         activity = true;
         x_value(event); 
     });
 
-    range.addEventListener('mousemove', (e) => {
+    block.addEventListener('mousemove', (event) => {
         if (activity == true) {
             x_value(event);
         }
     });
 
-    range.addEventListener('mouseup', () => {
+    block.addEventListener('mouseup', () => {
         activity = false;
     });
 
-    range.addEventListener('mouseleave', () => {
+    block.addEventListener('mouseleave', () => {
         activity = false;
     });
 });
