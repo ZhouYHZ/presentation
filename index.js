@@ -96,17 +96,17 @@ window.addEventListener('load', () => {
     let activity = false;
 
     function x_value(event) {
-        const Range = block.getBoundingClientRect();
-        const current = event.clientX - Range.left;
-        const value = Math.max (0, Math.min (current, Range.width));
+        let Range = block.getBoundingClientRect();
+        let current = event.clientX - Range.left;
+        let value = Math.max (0, Math.min (current, Range.width));
         console.log (value);
-        const inter = value / Range.width;
+        let inter = value / Range.width;
         output (inter);
         button.style.transform = `translate(${inter * 80 - 2}vw,7vw)`;
     }
 
     function output(inter) {
-        const text = document.querySelector('.note p');
+        let text = document.querySelector('.note p');
         if (inter > 0 && inter <= 0.25 ) {
             text.innerHTML = "1 hour"
         } else if (inter > 0.25 && inter <= 0.5) {
