@@ -106,10 +106,15 @@ window.addEventListener('load', () => {
     }
 
     function output(inter) {
-        if (inter <= 0.5) {
-            document.getElementsByClassName("note")[0].innerHTML = "1 hour"
-        } else if (inter > 0.5) {
-            document.getElementsByClassName("note")[0].innerHTML = "2 hour"
+        const text = document.querySelector('.note p');
+        if (inter > 0 && inter <= 0.25 ) {
+            text.innerHTML = "1 hour"
+        } else if (inter > 0.25 && inter <= 0.5) {
+            text.innerHTML = "2 hour"
+        } else if (inter > 0.5 && inter <= 0.75) {
+            text.innerHTML = "3 hour"
+        } else if (inter > 0.75 && inter <= 1) {
+            text.innerHTML = "4 hour"
         }
     }
 
