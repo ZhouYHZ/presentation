@@ -100,11 +100,15 @@ window.addEventListener('load', () => {
         const current = event.clientX - Range.left;
         const value = Math.max (0, Math.min (current, Range.width));
         console.log (value);
-        const X = value / Range.width;
-        button.style.transform = `translate(${X * 80 - 2}vw,7vw)`;
-        if (X <= 0.5) {
+        const inter = value / Range.width;
+        output (inter);
+        button.style.transform = `translate(${inter * 80 - 2}vw,7vw)`;
+    }
+
+    function output(inter) {
+        if (inter <= 0.5) {
             document.getElementsByClassName("note")[0].innerHTML = "1 hour"
-        } else if (X > 0.5) {
+        } else if (inter > 0.5) {
             document.getElementsByClassName("note")[0].innerHTML = "2 hour"
         }
     }
