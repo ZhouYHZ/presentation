@@ -111,11 +111,11 @@ window.addEventListener('load', () => {
     function output(inter) {
         let text = document.querySelector('.note p');
         if (inter > 1/3 && inter <= 2/3 ) {
-            text.innerHTML = "> 3 hour: Get dependencies, reduce efficiency for work and learn."
+            text.innerHTML = "> 3 hour: Get dependencies, anxiety and tension feel be increase."
         } else if (inter > 2/3 && inter <= 1) {
-            text.innerHTML = "> 4 hour: Loss of sleep time, which may affect health."
+            text.innerHTML = "> 4 hour: Loss of sleep time, which mean health damage for body."
         } else {
-            text.innerHTML = "1~2 hour: Not affect timetable, daily communication and activity.";
+            text.innerHTML = "1~2 hour: Not affect timetable, but may lose study time.";
         }
     }
 
