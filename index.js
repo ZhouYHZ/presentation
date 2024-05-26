@@ -1,10 +1,11 @@
 window.addEventListener('load', () => {
-    let currentIndex = 0;
-    //DOM
+    // DOM HTML
+    // Page count function and get slide element.
+    var count = 0;
     const slides = document.querySelectorAll('.slide');
 
     function Message(index) {
-        let animation = document.querySelectorAll('.textbox');
+        const animation = document.querySelectorAll('.textbox');
         if (index == 1) {
             animation.forEach(box => {
                 box.style.animationPlayState = 'running';
@@ -13,7 +14,7 @@ window.addEventListener('load', () => {
     }
 
     function scrollToSlide(index) {
-        const targetPosition = index * window.innerHeight;
+        let targetPosition = index * window.innerHeight;
         window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
@@ -22,16 +23,16 @@ window.addEventListener('load', () => {
     }
 
     function nextSlide() {
-        if (currentIndex < slides.length - 1) {
-            currentIndex++;
-            scrollToSlide(currentIndex);
+        if (count < slides.length - 1) {
+            count++;
+            scrollToSlide(count);
         }
     }
 
     function previousSlide() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            scrollToSlide(currentIndex);
+        if (count > 0) {
+            count--;
+            scrollToSlide(count);
         }
     }
 
@@ -62,7 +63,7 @@ window.addEventListener('load', () => {
     });
 
     // default slide
-    scrollToSlide(currentIndex);
+    scrollToSlide(count);
 });
 
 var i = 1;
@@ -81,11 +82,13 @@ function myTimer () {
         document.getElementsByClassName("time")[1].innerHTML = m + ":" + sec;
         document.getElementsByClassName("time")[2].innerHTML = m + ":" + sec;
         document.getElementsByClassName("time")[3].innerHTML = m + ":" + sec;
+        document.getElementsByClassName("time")[4].innerHTML = m + ":" + sec;
     } else {
         document.getElementsByClassName("time")[0].innerHTML = i;
         document.getElementsByClassName("time")[1].innerHTML = i;
         document.getElementsByClassName("time")[2].innerHTML = i;
         document.getElementsByClassName("time")[3].innerHTML = i;
+        document.getElementsByClassName("time")[4].innerHTML = i;
     }
     i = i + 1;
 };
@@ -93,14 +96,14 @@ function myTimer () {
 window.addEventListener('load', () => {
     const block = document.querySelector('.space');
     const button = document.querySelector('.bar');
-    let activity = false;
+    var activity = false;
+    output (0);
 
-    function x_value(event) {
-        let Range = block.getBoundingClientRect();
-        let current = event.clientX - Range.left;
-        let value = Math.max (0, Math.min (current, Range.width));
-        console.log (value);
-        let inter = value / Range.width;
+    function element_position(event) {
+        let range = block.getBoundingClientRect();
+        let current = event.clientX - range.left;
+        let value = Math.max (0, Math.min (current, range.width));
+        let inter = value / range.width;
         output (inter);
         button.style.transform = `translate(${inter * 80 - 2}vw,7vw)`;
     }
@@ -108,7 +111,7 @@ window.addEventListener('load', () => {
     function output(inter) {
         let text = document.querySelector('.note p');
         if (inter > 1/3 && inter <= 2/3 ) {
-            text.innerHTML = "> 3 hour: Get dependencies, reduce learn or work efficiency."
+            text.innerHTML = "> 3 hour: Get dependencies, reduce efficiency for work and learn."
         } else if (inter > 2/3 && inter <= 1) {
             text.innerHTML = "> 4 hour: Loss of sleep time, which may affect health."
         } else {
@@ -118,12 +121,12 @@ window.addEventListener('load', () => {
 
     block.addEventListener('mousedown', (event) => {
         activity = true;
-        x_value(event); 
+        element_position(event); 
     });
 
     block.addEventListener('mousemove', (event) => {
         if (activity == true) {
-            x_value(event);
+            element_position(event);
         }
     });
 

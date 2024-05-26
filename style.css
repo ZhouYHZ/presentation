@@ -92,4 +92,5 @@ p {
     border-radius: 2vw;
     background-color: white;
     transform: translate(-2vw,7vw);
+    transition: transform 0.1s ease-in-out;
 }
