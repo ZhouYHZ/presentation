@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     const slides = document.querySelectorAll('.slide');
 
     function Message(index) {
-        const animation = document.querySelectorAll('.textbox');
+        const animation = document.querySelectorAll('.textbox span');
         if (index == 1) {
             animation.forEach(box => {
                 box.style.animationPlayState = 'running';
@@ -83,12 +83,14 @@ function myTimer () {
         document.getElementsByClassName("time")[2].innerHTML = m + ":" + sec;
         document.getElementsByClassName("time")[3].innerHTML = m + ":" + sec;
         document.getElementsByClassName("time")[4].innerHTML = m + ":" + sec;
+        document.getElementsByClassName("time")[5].innerHTML = m + ":" + sec;
     } else {
         document.getElementsByClassName("time")[0].innerHTML = i;
         document.getElementsByClassName("time")[1].innerHTML = i;
         document.getElementsByClassName("time")[2].innerHTML = i;
         document.getElementsByClassName("time")[3].innerHTML = i;
         document.getElementsByClassName("time")[4].innerHTML = i;
+        document.getElementsByClassName("time")[5].innerHTML = i;
     }
     i = i + 1;
 };
@@ -105,7 +107,7 @@ window.addEventListener('load', () => {
         let value = Math.max (0, Math.min (current, range.width));
         let inter = value / range.width;
         output (inter);
-        button.style.transform = `translate(${inter * 80 - 2}vw,7vw)`;
+        button.style.transform = `translateX(${inter * 80 - 2}vw)`;
     }
 
     function output(inter) {
@@ -113,7 +115,7 @@ window.addEventListener('load', () => {
         if (inter > 1/3 && inter <= 2/3 ) {
             text.innerHTML = "> 3 hour: Get dependencies, anxiety and tension feel be increase."
         } else if (inter > 2/3 && inter <= 1) {
-            text.innerHTML = "> 4 hour: Loss of sleep time, which mean health damage for body."
+            text.innerHTML = "> 4 hour: Loss of sleep time, which mean 100% health damage."
         } else {
             text.innerHTML = "1~2 hour: Not affect timetable, but may lose study time.";
         }
