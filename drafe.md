@@ -15,7 +15,7 @@ I call it the “Social media progress bar”
 Ref [2] [3]
 "1~2 hour: Acceptable, not affect timetable."
 "> 3 hour: Get dependencies, anxiety and tension feel be increase."
-"> 4 hour: Loss of sleep time, which mean 100% health damage."S
+"> 4 hour: Loss of sleep time, which mean 100% health damage."
 
 In fact, 80% of the time on social media we do "useless things", like short videos etc, while communication only get 20%.
 
