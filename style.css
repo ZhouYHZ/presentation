@@ -34,10 +34,11 @@ p, span {
 }
 
 .time {
-    position: absolute;
+    position: fixed;
     color: white;
     font-size: 2vw;
-    right: 0;
+    right: 1vw;
+    bottom: 1vw;
 }
 
 .page {
