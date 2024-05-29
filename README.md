@@ -2,8 +2,8 @@ git branch -[]
 
 -d
 --delete
-Delete a branch. -D Shortcut for delete force [1]
+Delete a branch.
 
 -m
 --move
-Move/rename a branch. -M [1]
+Move/rename a branch.
