@@ -1,5 +1,4 @@
-@keyframes box
-{
+@keyframes box {
     from {opacity: 0;}
     to {opacity: 1;}
 }
@@ -91,8 +90,8 @@ p, span {
 }
 
 .botton {
-    width: 40vmin;
-    height: 40vmin;
+    width: 35vmin;
+    height: 35vmin;
     border-radius: 50%;
     background-color: #E3EDF7;
 }
@@ -102,22 +101,35 @@ p, span {
     display: flex;
     width: 15vmin;
     height: 15vmin;
-    border-radius: 50%;
 }
 
 .shape::before {
     content: '';
+    position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    box-shadow: 3vmin 3vmin 3vmin #88A5BF;
+    outline: 0.5vmin solid #E3EDF7;
+    box-shadow: 3vmin 3vmin 3vmin #88A5BF,
+    -3vmin -3vmin 3vmin #FFFFFF;
+}
+
+.shape::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    outline: 0.5vmin solid #E3EDF7;
+    box-shadow: inset 3vmin 3vmin 3vmin #88A5BF,
+    inset -3vmin -3vmin 3vmin #FFFFFF;
 }
 
 .blur {
     position: absolute;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(1vmin);
+    backdrop-filter: blur(2vmin);
 }
 
 span:nth-of-type(2) {
