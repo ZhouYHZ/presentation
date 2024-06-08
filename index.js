@@ -45,7 +45,6 @@ window.addEventListener('load', () => {
         }
     });
 
-    // set ArrowDown activity
     window.addEventListener('keydown', (event) => {
         if (event.code === 'ArrowDown') {
             nextSlide();
@@ -54,7 +53,6 @@ window.addEventListener('load', () => {
         }
     });
 
-    // set ArrowUp activity
     window.addEventListener('keydown', (event) => {
         if (event.code === 'ArrowUp') {
             previousSlide();
