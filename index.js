@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     const slides = document.querySelectorAll('.slide');
 
     function Message(index) {
-        const animation = document.querySelectorAll('.textbox span');
+        const animation = document.querySelectorAll('.textbox .message');
         if (index == 1) {
             animation.forEach(box => {
                 box.style.animationPlayState = 'running';

@@ -15,7 +15,7 @@ h2 {
     font-size: 300%;
 }
 
-span {
+.message {
     border-radius:0.3em;
     background-color: white;
     color: black;
@@ -23,7 +23,7 @@ span {
     opacity: 0;
 }
 
-p, span {
+p, .message {
     font-size: 300%;
 }
 
@@ -96,6 +96,10 @@ p, span {
     background-color: #c2cbd9;
 }
 
+.red-text {
+    color: red;
+}
+
 .shape {
     position: absolute;
     display: flex;
@@ -109,7 +113,6 @@ p, span {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    outline: 0.5vmin solid #c2cbd9;
     box-shadow: 3vmin 3vmin 6vmin #a3b1c6,
     -2vmin -2vmin 4vmin #e0e5ec;
 }
@@ -120,7 +123,6 @@ p, span {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    outline: 0.5vmin solid #c2cbd9;
     box-shadow: inset 3vmin 3vmin 9vmin #a3b1c6,
     inset -3vmin -3vmin 6vmin #e0e5ec;
 }
@@ -132,27 +134,27 @@ p, span {
     backdrop-filter: blur(2vmin);
 }
 
-span:nth-of-type(2) {
+.message:nth-of-type(2) {
     align-self: flex-end;
     background-color: #91ED61;
 }
 
-span:nth-of-type(1) {
+.message:nth-of-type(1) {
     animation: box 1s 1s forwards;
     animation-play-state: paused;
 }
 
-span:nth-of-type(2) {
+.message:nth-of-type(2) {
     animation: box 1s 2s forwards;
     animation-play-state: paused;
 }
 
-span:nth-of-type(3) {
+.message:nth-of-type(3) {
     animation: box 1s 3s forwards;
     animation-play-state: paused;
 }
 
-span:nth-of-type(4) {
+.message:nth-of-type(4) {
     animation: box 1s 4s forwards;
     animation-play-state: paused;
 }
