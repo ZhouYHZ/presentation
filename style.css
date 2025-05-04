@@ -74,66 +74,6 @@ p, .message {
     transition: transform 0.1s ease-in-out;
 }
 
-.graph {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.padding {
-    padding: 10vmin 10vmin;
-}
-
-.botton {
-    width: 30vmin;
-    height: 30vmin;
-    border-radius: 50%;
-    background-color: #c2cbd9;
-}
-
-.red-text {
-    color: red;
-}
-
-.shape {
-    position: absolute;
-    display: flex;
-    width: 15vmin;
-    height: 15vmin;
-}
-
-.shape::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: 3vmin 3vmin 6vmin #a3b1c6,
-    -2vmin -2vmin 4vmin #e0e5ec;
-}
-
-.shape::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: inset 3vmin 3vmin 9vmin #a3b1c6,
-    inset -3vmin -3vmin 6vmin #e0e5ec;
-}
-
-.blur {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(2vmin);
-}
-
 .message:nth-of-type(2) {
     align-self: flex-end;
     background-color: #91ED61;
