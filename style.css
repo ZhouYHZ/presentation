@@ -1,8 +1,3 @@
-@keyframes box {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
 body {
     background-color: rgb(30, 30, 50);
 }
@@ -15,16 +10,8 @@ h2 {
     font-size: 5vh;
 }
 
-.message {
-    border-radius:0.3em;
-    background-color: white;
-    color: black;
-    margin: 1vh 0;
-    opacity: 0;
-}
-
-p, .message {
-    font-size: 5vh;
+p {
+    font-size: 3vh;
 }
 
 .slide {
@@ -35,9 +22,8 @@ p, .message {
 .time {
     position: fixed;
     color: white;
-    font-size: 300%;
-    right: 1vw;
-    bottom: 1vw;
+    right: 2vw;
+    bottom: 1vh;
 }
 
 .page {
@@ -72,29 +58,4 @@ p, .message {
     background-color: white;
     transform: translateX(-2vw);
     transition: transform 0.1s ease-in-out;
-}
-
-.message:nth-of-type(2) {
-    align-self: flex-end;
-    background-color: #91ED61;
-}
-
-.message:nth-of-type(1) {
-    animation: box 1s 1s forwards;
-    animation-play-state: paused;
-}
-
-.message:nth-of-type(2) {
-    animation: box 1s 2s forwards;
-    animation-play-state: paused;
-}
-
-.message:nth-of-type(3) {
-    animation: box 1s 3s forwards;
-    animation-play-state: paused;
-}
-
-.message:nth-of-type(4) {
-    animation: box 1s 4s forwards;
-    animation-play-state: paused;
 }

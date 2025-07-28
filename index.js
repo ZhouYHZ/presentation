@@ -4,22 +4,13 @@ window.addEventListener('load', () => {
     var count = 0;
     const slides = document.querySelectorAll('.slide');
 
-    function Message(index) {
-        const animation = document.querySelectorAll('.textbox .message');
-        if (index == 1) {
-            animation.forEach(box => {
-                box.style.animationPlayState = 'running';
-            });
-        }
-    }
-
     function scrollToSlide(index) {
         let targetPosition = index * window.innerHeight;
         window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
         });
-         Message(index);
+        // Message(index);
     }
 
     function nextSlide() {
@@ -76,9 +67,9 @@ function myTimer () {
             m = m + 1;
         }
         let sec = i - m * 60;
-        document.getElementsByClassName("time")[0].innerHTML = m + ":" + sec;
+        document.getElementsByClassName("time")[0].getElementsByTagName("p")[0].innerHTML = m + ":" + sec;
     } else {
-        document.getElementsByClassName("time")[0].innerHTML = i;
+        document.getElementsByClassName("time")[0].getElementsByTagName("p")[0].innerHTML = i;
     }
     i = i + 1;
 };
@@ -100,13 +91,7 @@ window.addEventListener('load', () => {
 
     function output(inter) {
         let text = document.querySelector('.note p');
-        if (inter > 1/3 && inter <= 2/3 ) {
-            text.innerHTML = "> 3 hour: Get dependencies, anxiety and tension feel be increase."
-        } else if (inter > 2/3 && inter <= 1) {
-            text.innerHTML = "> 4 hour: Loss of sleep time, which mean 100% health damage."
-        } else {
-            text.innerHTML = "1~2 hour: Not affect timetable, but may lose study time.";
-        }
+        text.innerHTML = inter.toFixed(2);
     }
 
     block.addEventListener('mousedown', (event) => {
