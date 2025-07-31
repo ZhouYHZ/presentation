@@ -82,11 +82,12 @@ window.addEventListener('load', () => {
 
     function element_position(event) {
         let range = block.getBoundingClientRect();
-        let current = event.clientX - range.left;
-        let value = Math.max (0, Math.min (current, range.width));
-        let inter = value / range.width;
+        let position = event.clientX - range.left;
+        let clamp = Math.max (0, Math.min (position, range.width));
+        let inter = clamp/range.width;
+        let constant = (1/2)*(button.getBoundingClientRect().width/range.width);
         output (inter);
-        button.style.transform = `translateX(${inter * 80 - 2}vw)`;
+        button.style.transform = `translate(${(inter-constant)*80}vw,-25%)`;
     }
 
     function output(inter) {
